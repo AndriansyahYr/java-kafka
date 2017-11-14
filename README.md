@@ -13,12 +13,10 @@ Click **Finish** button to finish the importing
 1. Open command line in your Kafka installation folder
 2. Launch Zookeeper with `.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties`
 3. Open a second command line in your Kafka installation folder
-4. Launch first Kafka broker: `.\bin\windows\kafka-server-start.bat .\config\server-1.properties`
-5. Open a third command line in your Kafka installation folder
-6. Launch second Kafka broker: `.\bin\windows\kafka-server-start.bat .\config\server-2.properties`
-7. Open a fourth command line in your Kafka installation folder
-8. Create a topic: `.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 2 --partitions 4 --topic kafkatest` 
-9.Open the **ProducerTest.java** 
+4. Launch single Kafka broker: `.\bin\windows\kafka-server-start.bat .\config\server.properties`
+5. Open a fourth command line in your Kafka installation folder
+6. Create a topic: `.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 2 --partitions 4 --topic kafkatest` 
+7. Shot list topic `.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181` 
 
 **Right click -> Run As -> Java Application** or use the shortcut: **Alt+Shift+x, j** to start the main method
 
